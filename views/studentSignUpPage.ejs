@@ -1,0 +1,53 @@
+<%- include("include/headerSTUDENTsign")%>
+
+
+    <form method="post" action="/studentProfile/api/users">
+        <div class="form-group">
+            <div class="wrapper bg-white mt-sm-5">
+                <h4 class="pb-4 border-bottom">Sign up to start learning!</h4>
+                <div class="py-2">
+                    <div class="row py-2">
+                        <div class="col-md-6">
+                            <label for="firstname">First Name</label>
+                            <input type="text" name="sFname" class="bg-light form-control" placeholder="Enter First Name">
+                        </div>
+                        <div class="col-md-6 pt-md-0 pt-3">
+                            <label for="lastname">Last Name</label>
+                            <input type="text" name="sLname" class="bg-light form-control" placeholder="Enter Last Name">
+                        </div>
+                    </div>
+                    <div class="row py-2">
+
+                        <div class="col-md-6 pt-md-0 pt-3">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" name="sPhone" class="bg-light form-control" placeholder="+966">
+                        </div>
+                        <div class="col-md-6 pt-md-0 pt-3">
+                            <label for="phone">Email</label>
+                            <input type="tel" name="semail" class="bg-light form-control" placeholder="email@gmail.com">
+                        </div>
+                        <div class="col-md-6 pt-md-0 pt-3">
+                            <label for="pws">Password</label>
+                            <input type="password" name="sPassword" class="bg-light form-control"
+                                placeholder="Password">
+                        </div>
+                        <div class="col-md-6 pt-md-0 pt-3">
+                            <label for="pws1">Re-enter Password</label>
+                            <input type="password" class="bg-light form-control" placeholder="Password">
+                        </div>
+                    </div>
+
+                    <div class="py-3 pb-4 border-bottom">
+                        <button type="submit" class="btn btn-primary mr-3">Register</button>
+                        <button class="btn border button" type="reset">Reset</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </form>
+    </div>
+
+
+
+    <%- include("include/footer")%>

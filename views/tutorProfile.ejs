@@ -1,0 +1,211 @@
+<%- include("include/headerTUTOR")%>
+
+
+
+  <div class="bg-white">
+    <hr class="m-0">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-6 border-right">
+          <div class="text-center py-5">
+            <img src="../assets/images/userIMG.jpg" style="width:150px; height:150px;" alt
+              class="ui-w-100 rounded-circle">
+            <div class="col-md-8 col-lg-6 col-xl-5 p-0 mx-auto">
+              <h4 class="font-weight-bold my-4">
+                <%= data.Fname%>
+                  <%= data.Lname%>
+              </h4>
+              <div class="text-muted mb-4">
+                <%= data.email%>
+                  <%= data.Phone%>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 pt-5">
+          <div class="row">
+            <div class="blockabout">
+              <div class="blockabout-inner text-center text-sm-start">
+                <div class="title-big pb-3 mb-3">
+                  <h3>ABOUT ME</h3>
+                </div>
+                <p class="description-p text-muted pe-0 pe-lg-0">
+                  <%= data.About%>
+                </p>
+               <div class="sosmed-horizontal pt-3 pb-3">
+                  <h5>Courses Taught: <%= data.course%><br/> 
+                    <h5>Grade Taught: <%= data.grade%>
+                    <br>Hourly Price: <%= data.Price%>
+                  
+                    </h5>
+                  <i class="fa fa-whatsapp" style="font-size:20px">
+                    <%= data.Phone%>
+                  </i>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <ul class="nav nav-tabs fs-5 pl-5" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"
+          role="tab" aria-controls="profile" aria-selected="false">Profile</button>
+      </li>
+      </li>
+    </ul>
+    <hr class="m-0">
+    <div class="tab-pane active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        <form id="update_user" action="/tutorPr3ofile/api/users/changeProfile" method="post">
+          <div class="wrapper bg-white mt-sm-5" style="padding: 1npm s0px">
+            <h4 class="pb-4 border-bottom">Account settings</h4>
+            <div class="d-flex align-items-start py-3 border-bottom">
+              <img src="../assets/images/userIMG.jpg" style="width:100px; height:100px;" alt
+                class="ui-w-100 rounded-circle">
+              <div class="pl-sm-4 pl-2" id="img-section">
+                <b>Profile Photo</b>
+                <p>Accepted file type .png. Less than 1MB</p>
+                <button class="btn button border"><b>Upload</b></button>
+              </div>
+            </div>
+            <div class="py-2">
+              <div class="row py-2">
+                <div class="col-md-6">
+
+                  <label for="Fname">First Name</label>
+                  <input type="text" name="Fname" class="bg-light form-control" value="" placeholder="Enter First Name">
+
+                </div>
+                <div class="col-md-6 pt-md-0 pt-3">
+
+                  <label for="Lname">Last Name</label>
+                  <input type="text" name="Lname" class="bg-light form-control" value="" placeholder="Enter Last Name">
+
+                </div>
+              </div>
+              <div class="row py-2">
+                <div class="col-md-6">
+
+                  <label for="email">Email Address</label>
+                  <input type="text" name="email" class="bg-light form-control" value="" placeholder="email@gmail.com">
+
+                </div>
+                <div class="col-md-6 pt-md-0 pt-3">
+
+                  <label for="Phone">Phone Number</label>
+                  <input type="tel" name="Phone" class="bg-light form-control" value="" placeholder="+966">
+                  <input  name="id" value="<%= data._id%>" class="bg-light form-control" value="" hidden>
+
+                </div>
+              </div>
+              <div class="row py-2">
+                <div class="col-md-6">
+                  <label for="C1">Course 1</label>
+                  <select name="C1" id="C1" class="bg-light">
+                    <option value="Science">Science</option>
+                    <option value="Mathematics">Mathematics</option>
+                    <option value="Chemistry">Chemistry</option>
+                    <option value="Biology">Biology</option>
+                    <option value="Physics">Physics</option>
+                    <option value="English-language">English-language</option>
+                    <option value="Arabic-language">Arabic-language</option>
+                    <option value="History">History</option>
+                  </select>
+                </div>
+                
+                <div class="col-md-6 pt-md-0 pt-3" id="lang">
+                  <label for="G">Grade</label>
+                  <div class="arrow">
+                    <select name="G" id="G" class="bg-light">
+                      <option value="7th Grade">7th Grade</option>
+                      <option value="8th Grade">8th Grade</option>
+                      <option value="9th Grade">9th Grade</option>
+                      <option value="10th Grade">10th Grade</option>
+                      <option value="11th Grade">11th Grade</option>
+                      <option value="12th Grade">12th Grade</option>
+                    </select>
+        
+                  </div>
+                </div>
+                
+              </div>
+              <div>
+                <label for="price">Price per hour</label>
+                <input type="text" name="Price" class="form-control bg-light" id="price" name="price">
+              </div>
+
+              <div class="col-md-6 pt-md-0 pt-3">
+
+                <label for="pws">Password</label>
+                <input type="password" class="bg-light form-control" placeholder="Password">
+
+              </div>
+              <div class="col-md-6 pt-md-0 pt-3">
+                <label for="Password">Re-enter Password</label>
+                <input type="password" name="Password" class="bg-light form-control" placeholder="Password">
+              </div>
+
+              <div>
+                <div class="form-outline">
+
+                  <label class="form-label" for="textArea1">About me</label>
+                  <textarea class="form-control" id="textArea1" rows="4"></textarea>
+
+                </div>
+              </div>
+
+              <div class="py-3 pb-4 border-bottom">
+
+                <button class="btn btn-primary mr-3" type="submit">Save Changes</button>
+                <button class="btn border button">Cancel</button>
+
+              </div>
+              <div class="d-sm-flex align-items-center pt-3" id="deactivate">
+                <div>
+                  <b>Deactivate your account</b>
+                </div>
+                <div class="ml-auto">
+                  <a href="/tutorProfile/api/users/delete/<%= data._id%>" class="btn danger">Deactivate</a>
+                </div>
+              </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+  </div>
+
+
+  
+  <script>
+    $("#update_user").submit(function (event) {
+      event.preventDefault();
+
+      var unindexed_array = $(this).serializeArray();
+      var data = {}
+
+      $.map(unindexed_array, function (n, i) {
+        data[n['name']] = n['value']
+      })
+
+
+      var request = {
+        "url": `http://localhost:3000/tutorProfile/api/users/${data.id}`,
+        "method": "PUT",
+        "data": data
+      }
+
+      $.ajax(request).done(function (response) {
+        alert("Data Updated Successfully!");
+      })
+
+    })
+
+  </script>
+  <%- include("include/footer")%>

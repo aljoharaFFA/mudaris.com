@@ -1,0 +1,37 @@
+<%- include("include/header")%>
+
+
+<table class="center" id="myTable">
+	<thead>
+					  <tr class="table-header">
+						<th class="col" col-index = 1></th>
+						<th class="col" col-index = 2>NAME</th>
+						<th class="col" col-index = 3>Course
+							<select class="table-filter" onchange="filter_rows()">
+								<option value="all" selected> All </option>
+							</select>
+						</th>
+						<th class="col" col-index = 4>Grade
+							<select class="table-filter" onchange="filter_rows()">
+								<option value="all" selected> All </option>
+							</select>
+						</th>
+						
+						<th class="col" col-index = 5>Hourly Price</th>
+						<th class="col" col-index = 6>Profile</th>
+					  </tr>
+	</thead>  
+<tbody>	
+				  
+<%- include("include/tutorMiniInfo")%>
+</tbody>
+</table>
+<script>
+	window.onload = () => {
+		console.log(document.querySelector("#myTable > tbody > tr:nth-child(1) > td:nth-child(2) ").innerHTML);
+	};
+
+	getUniqueValuesFromColumn()
+	
+</script>
+<%- include("include/footer")%>

@@ -1,0 +1,93 @@
+<%- include("include/headerTUTOR")%>
+
+
+
+  <section class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 mb-4 mb-sm-5 mt-4">
+          <div class="card card-style1 border-0">
+            <div class="card-body p-1-9 p-sm-2-3 p-md-6 p-lg-7">
+              <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                  <img src="../assets/images/userIMG.jpg" style="width:250px; height:230px" alt="...">
+                </div>
+                <div class="col-lg-6 px-xl-10">
+                  <div class=" d-lg-inline-block py-1-9 px-1-9 px-sm-6 mb-1-9 rounded">
+                    <h3 class="h2  mb-2" style="color:black;">
+                      <%= user.Fname%>
+                        <%= user.Lname%>
+                    </h3>
+                  </div>
+                  <ul class="list-unstyled mb-1-9">
+
+                    
+                    <li class="mb-2 mb-xl-3 display-28"><span
+                      class="display-26 text-secondary me-2 font-weight-600">Course :</span>
+                    <%= user.course%>
+                  </li>
+                  <li class="mb-2 mb-xl-3 display-28"><span
+                    class="display-26 text-secondary me-2 font-weight-600">Grade :</span>
+                  <%= user.grade%>
+                </li>
+                <li class="mb-2 mb-xl-3 display-28"><span
+                  class="display-26 text-secondary me-2 font-weight-600">Hourly Price:</span>
+                <%= user.Price%>
+              </li>
+                
+                  
+                    <li class="display-28"><span class="display-26 text-secondary me-2 font-weight-600">WhatsApp:</span>
+                      <%= user.Phone%>
+                    </li>
+                    <button type="button" class="btn border-primary mt-3" data-toggle="modal"
+                      data-target="#exampleModalCenter">
+                      Request Session
+                    </button>
+                  </ul>
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLongTitle">Request Session</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <form>
+                            <label for="sessiontime">Please send course name through Whatsapp to get Google Classroom invitaion link</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  </ul>
+                  <ul class="social-icon-style1 list-unstyled mb-0 ps-0">
+                    <li><a href="#!"><i class="ti-twitter-alt"></i></a></li>
+                    <li><a href="#!"><i class="ti-facebook"></i></a></li>
+                    <li><a href="#!"><i class="ti-pinterest"></i></a></li>
+                    <li><a href="#!"><i class="ti-instagram"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12 mb-4 mb-sm-5">
+          <div>
+            <span class="section-title text-primary mb-3 mb-sm-4">About Me</span>
+            <p>
+              <%= user.About%>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  </div>
+
+
+  <%- include("include/footer")%>

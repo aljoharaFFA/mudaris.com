@@ -1,0 +1,27 @@
+			#sign-in{
+				width: 450px;
+				margin:0px auto;
+				margin-top: 15%;
+				border-left: 1px solid #C0C9CC;
+				border-right: 1px solid #C0C9CC;
+				padding: 1em;
+			}
+			.form-control {
+				width: 100%;
+				text-align: center;
+			}
+			.navbar-custom {
+				background-color: rgb(0,68,129);
+			}
+			.navbar-brand{
+				color: white;
+			}
+			#colb ul li a
+			{
+				color:white;
+			}
+			
+		*{
+	font-family: 'Lato', sans-serif;
+}	
+			

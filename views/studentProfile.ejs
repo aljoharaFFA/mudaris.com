@@ -1,0 +1,89 @@
+<%- include("include/headerSTUDENT")%>
+
+
+  <div class="bg-white">
+    <hr class="m-0">
+
+    <div class="container">
+      <div class="text-center py-5">
+        <img src="../assets/images/h.png" alt class="ui-w-100 rounded-circle">
+
+        <div class="col-md-8 col-lg-6 col-xl-5 p-0 mx-auto">
+          <h4 class="font-weight-bold my-4">
+            <%- data.sFname %>
+              <%- data.sLname %>
+          </h4>
+
+          <div class="text-muted mb-4">
+            <%- data.semail %>
+          </div>
+          <div class="text-muted mb-4">
+            <%- data.sPhone %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <ul class="nav nav-tabs fs-5" id="myTab" role="tablist">
+     
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"
+          role="tab" aria-controls="profile" aria-selected="false">Profile</button>
+      </li>
+   
+      
+    </ul>
+    <hr class="m-0">
+    
+      <div class="tab-pane active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        <div class="wrapper bg-white mt-sm-5">
+          <h4 class="pb-4 border-bottom">Account settings</h4>
+          <form method="post" action="/studentProfile/api/users/update/<%= data._id%>">
+            <div class="py-2">
+              <div class="row py-2">
+                <div class="col-md-6">
+                  <label for="firstname">First Name</label>
+                  <input name="sFname" type="text" class="bg-light form-control" placeholder="Enter First Name">
+                </div>
+                <div class="col-md-6 pt-md-0 pt-3">
+                  <label for="lastname">Last Name</label>
+                  <input name="sLname" type="text" class="bg-light form-control" placeholder="Enter Last Name">
+                </div>
+              </div>
+              <div class="row py-2">
+                <div class="col-md-6">
+                  <label for="email">Email Address</label>
+                  <input name="semail" type="text" class="bg-light form-control" placeholder="email@gmail.com">
+                </div>
+                <div class="col-md-6 pt-md-0 pt-3">
+                  <label for="phone">Phone Number</label>
+                  <input name="sPhone" type="tel" class="bg-light form-control" placeholder="+966">
+                </div>
+              </div>
+              <div class="py-3 pb-4 border-bottom">
+                <button type="submit" class="btn btn-primary mr-3">Save Changes</button>
+                <button class="btn border button">Cancel</button>
+              </div>
+          </form>
+
+          <div class="d-sm-flex align-items-center pt-3" id="deactivate">
+            <div>
+              <b>Deactivate your account</b>
+              <p>Details about your company account and password</p>
+            </div>
+            <div class="ml-auto">
+              <a href="/studentProfile/api/users/delete/<%= data._id%>" class="btn danger">Deactivate</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+  </div>
+
+
+
+
+  <%- include("include/footer")%>

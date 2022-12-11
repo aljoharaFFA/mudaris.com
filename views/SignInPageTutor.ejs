@@ -1,0 +1,80 @@
+<%- include("include/headerTUTORsign")%>
+
+
+
+
+  <div id="sign-in" style="background-color: white;border:0.5px solid gray; border-radius:5%;">
+    <form action="/tutorProfile/api/users/signin" method="post">
+      <h4 class="p-1">Welcome back, Tutor.</h4>
+      <div class="form-group">
+        <label for="em" class="form-label">Email:</label>
+        <input type="email" class="form-control" id="em" name="em"><br>
+        <label for="ps">Password: </label>
+        <input type="password" class="form-control" id="ps" name="ps"><br>
+        <p> Forgot your password?<a data-toggle="modal" data-target="#exampleModalCenter">
+            Click here.
+          </a></p>
+        <button type="submit" class="btn btn-dark m-1 mt-2">Sign in</button>
+        <button type="button" class="btn btn-primary m-1 mt-2" onclick="window.location.href ='tutorSignUpPage'">Sign
+          up</button>
+
+      </div>
+    </form>
+  </div>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Reset your password</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container padding-bottom-3x mb-2 mt-2">
+            <div class="row justify-content-center">
+              <div class="col-lg-8 col-md-10">
+                <div class="forgot">
+
+                  <h2>Forgot your password?</h2>
+                  <p>Change your password in three easy steps. This will help you to secure your password!</p>
+                  <ol class="list-unstyled">
+                    <li><span class="text-primary text-medium">1. </span>Enter your email address below.</li>
+                    <li><span class="text-primary text-medium">2. </span>Our system will send you a temporary link</li>
+                    <li><span class="text-primary text-medium">3. </span>Use the link to reset your password</li>
+                  </ol>
+
+                </div>
+
+                <form class="card mt-4">
+                  <div class="card-body">
+                    <div class="form-group">
+                      <label for="email-for-pass">Enter your email address</label>
+                      <input class="form-control" type="text" id="email-for-pass" required="">
+                    </div>
+                  </div>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="close" data-dismiss="modal" value="c">
+            <small class="pl-2">cancel</small>
+          </button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <%- include("include/footer")%>

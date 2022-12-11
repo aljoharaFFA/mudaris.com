@@ -1,0 +1,23 @@
+<%for (var i=0; i < users.length; i++){%>
+  <tr class="table-row">
+    <td>
+      <img src="../assets/images/userIMG.jpg" style="width: 100px; height: 100px" alt class="ui-w-100 rounded-circle" />
+    </td>
+    <td>
+      <%= users[i].Fname%>
+        <%= users[i].Lname%>
+    </td>
+    <td data-label="name">
+      <%= users[i].course%>
+    </td>
+    <td data-label="name">
+      <%= users[i].grade%>
+    </td>
+    <td data-label="price">
+      <%= users[i].Price%>
+    </td>
+    <td>
+      <a href="/tutorViewProfile/<%= users[i]._id%>" style="color: black">View Profile</a>
+    </td>
+  </tr>
+  <%}%>

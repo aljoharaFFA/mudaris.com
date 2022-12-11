@@ -1,0 +1,138 @@
+<%- include("include/headerTUTORsign")%>
+
+<form
+  action="/tutorProfile/api/users/create"
+  method="post"
+  id="tutorSignUpPage"
+>
+  <div class="wrapper bg-white mt-sm-5">
+    <h4 class="pb-4 border-bottom">Sign Up to start tutoring!</h4>
+    <div class="d-flex align-items-start py-3 border-bottom">
+      <img
+        src="../assets/images/userIMG.jpg"
+        style="width: 100px; height: 100px"
+        alt
+        class="ui-w-100 rounded-circle"
+      />
+      <div class="pl-sm-4 pl-2" id="img-section">
+        <b>Profile Photo</b>
+        <p>Accepted file type .png. Less than 1MB</p>
+        <a class="btn button border"><b>Upload</b></a>
+      </div>
+    </div>
+    <div class="py-2">
+      <div class="row py-2">
+        <div class="col-md-6">
+          <label for="Fname">First Name</label>
+          <input
+            type="text"
+            name="Fname"
+            class="bg-light form-control"
+            placeholder="Enter First Name"
+          />
+        </div>
+        <div class="col-md-6 pt-md-0 pt-3">
+          <label for="Lname">Last Name</label>
+          <input
+            type="text"
+            name="Lname"
+            class="bg-light form-control"
+            placeholder="Enter Last Name"
+          />
+        </div>
+      </div>
+      <div class="row py-2">
+        <div class="col-md-6">
+          <label for="email">Email Address</label>
+          <input
+            type="text"
+            name="email"
+            class="bg-light form-control"
+            placeholder="email@gmail.com"
+          />
+        </div>
+        <div class="col-md-6 pt-md-0 pt-3">
+          <label for="phone">Phone Number</label>
+          <input
+            name="Phone"
+            type="tel"
+            class="bg-light form-control"
+            placeholder="+966 "
+          />
+        </div>
+        <div class="col-md-6 pt-md-0 pt-3">
+          <label for="pws">Password</label>
+          <input
+            type="password"
+            class="bg-light form-control"
+            placeholder="Password"
+          />
+        </div>
+        <div class="col-md-6 pt-md-0 pt-3">
+          <label for="Password">Re-enter Password</label>
+          <input
+            type="password"
+            name="Password"
+            class="bg-light form-control"
+            placeholder="Password"
+          />
+        </div>
+      </div>
+      <div class="row py-2">
+        <div class="col-md-6">
+          <label for="C1">Course 1</label>
+          <select name="C1" id="C1" class="bg-light">
+            <option value="Science">Science</option>
+            <option value="Mathematics">Mathematics</option>
+            <option value="Chemistry">Chemistry</option>
+            <option value="Biology">Biology</option>
+            <option value="Physics">Physics</option>
+            <option value="English-language">English-language</option>
+            <option value="Arabic-language">Arabic-language</option>
+            <option value="History">History</option>
+          </select>
+        </div>
+        <div class="col-md-6 pt-md-0 pt-3" id="lang">
+          <label for="G">Grade</label>
+          <div class="arrow">
+            <select name="G" id="G" class="bg-light">
+              <option value="7th Grade">7th Grade</option>
+              <option value="8th Grade">8th Grade</option>
+              <option value="9th Grade">9th Grade</option>
+              <option value="10th Grade">10th Grade</option>
+              <option value="11th Grade">11th Grade</option>
+              <option value="12th Grade">12th Grade</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label for="Price">Price per hour</label>
+        <input
+          type="text"
+          name="Price"
+          class="form-control bg-light"
+          id="price"
+          name="price"
+        />
+      </div>
+      <div>
+        <div class="form-outline">
+          <label class="form-label" for="textArea1">About me</label>
+          <textarea
+            class="form-control"
+            name="About"
+            id="textArea1"
+            rows="4"
+          ></textarea>
+        </div>
+      </div>
+      <div class="py-3 pb-4 border-bottom">
+        <button type="submit" class="btn btn-primary mr-3">Register</button>
+        <button class="btn border button" type="reset">Reset</button>
+      </div>
+    </div>
+  </div>
+</form>
+
+<%- include("include/footer")%>

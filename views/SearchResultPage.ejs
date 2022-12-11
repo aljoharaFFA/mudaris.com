@@ -1,0 +1,43 @@
+<%- include("include/header")%>
+
+
+<table class="center" id="myTable">
+	<thead>
+					  <tr class="table-header">
+						<th class="col"></th>
+						<th class="col">NAME</th>
+						<th class="col">Course
+							<select id="selectField">
+								<option>Mathematics</option>
+      								<option>Science</option>
+     								<option>Chemistry</option>
+     								<option>Physics</option>
+     								<option>Biology</option>
+      								<option>English Language</option>
+      								<option>Arabic Language</option>
+      								<option>History</option>
+							</select>
+						</th>
+						<th class="col">Grade
+	
+							<select id="selectField">
+								<option selected>All</option>
+								<option>Grade 8</option>
+								<option>Grade 9</option>
+								<option>Grade 10</option>
+								<option>Grade 11</option>
+								<option>Grade 12</option>
+							</select>
+							<script type="text/javascript" src="../assets/js/filterGrade.js"></script>
+						</th>
+						
+						<th class="col">Hourly Price</th>
+						<th class="col">Profile</th>
+					  </tr>
+					  </thead> 
+	
+				  
+<%- include("include/tutorMiniInfo")%>
+</table>
+
+<%- include("include/footer")%>
